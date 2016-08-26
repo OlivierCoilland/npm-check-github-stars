@@ -1,0 +1,14 @@
+{
+  "name": "npm-check-github-stars-test",
+  "version": "0.0.0",
+  "description": "Fake package.json for tests",
+  "dependencies": {
+    "bluebird": "3.4.3",
+    "chalk": "1.1.3",
+    "cint": "8.2.1",
+    "cli-table": "0.3.1",
+    "commander": "2.9.0",
+    "fast-diff": "1.0.1",
+    "unknown": "0.0.0"
+  }
+}

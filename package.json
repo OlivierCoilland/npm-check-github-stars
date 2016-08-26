@@ -1,0 +1,41 @@
+{
+  "name": "npm-check-github-stars",
+  "version": "1.0.0",
+  "description": "Check how many GitHub stars your dependencies are rated",
+  "keywords": [
+    "npm",
+    "package",
+    "check",
+    "github",
+    "stars"
+  ],
+  "homepage": "https://github.com/OlivierCoilland/npm-check-github-stars#readme",
+  "bugs": "https://github.com/OlivierCoilland/npm-check-github-stars/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Olivier Coilland",
+    "url": "https://github.com/OlivierCoilland"
+  },
+  "bin": {
+    "npm-check-github-stars": "./bin/npm-check-github-stars",
+    "ncgs": "./bin/ncgs"
+  },
+  "main": "./lib/npm-check-github-stars",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlivierCoilland/npm-check-github-stars.git"
+  },
+  "scripts": {
+    "lint": "eslint bin/ncgs",
+    "lint:fix": "eslint --fix bin/ncgs",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "npm-registry-client": "7.1.2",
+    "octonode": "0.7.6"
+  },
+  "devDependencies": {
+    "eslint": "3.4.0"
+  },
+  "preferGlobal": true
+}
