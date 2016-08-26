@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "npm-registry-client": "7.1.2",
+    "npmlog": "4.0.0",
     "octonode": "0.7.6"
   },
   "devDependencies": {

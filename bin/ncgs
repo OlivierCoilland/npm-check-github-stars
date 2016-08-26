@@ -2,15 +2,19 @@
 
 'use strict';
 
+const LOG_LEVEL = 'warn';
 const GITHUB_REPOSITORY_RE = /github\.com\/(.*?)(\.git)?$/;
-const NPM_REGISTRY_PARAMS = {};
 
+const log = require('npmlog');
 const fs = require('fs');
 const path = require('path');
 const github = require('octonode');
 const ghClient = github.client();
 const RegClient = require('npm-registry-client');
-const client = new RegClient();
+log.level = LOG_LEVEL;
+const client = new RegClient({
+    log: log
+});
 
 const rootPath = process.cwd();
 const target = process.argv.slice(2)[0];
@@ -33,7 +37,7 @@ function checkDependencies(dependencies) {
 }
 
 function checkDependencie(dependencie) {
-    client.get('https://registry.npmjs.org/' + dependencie, NPM_REGISTRY_PARAMS, (error, data) => {
+    client.get('https://registry.npmjs.org/' + dependencie, {}, (error, data) => {
         const repository = data.repository;
         if (!repository) {
             console.log(dependencie, 'No repository found');
