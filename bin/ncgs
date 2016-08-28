@@ -2,6 +2,12 @@
 
 'use strict';
 
+const updateNotifier = require('update-notifier');
+const pkg = require('../package.json');
+
+// Print an update notification if a new version of ncgs is available.
+updateNotifier({pkg}).notify();
+
 const LOG_LEVEL = 'warn';
 const GITHUB_REPOSITORY_RE = /github\.com\/(.*?)(\.git)?$/;
 
