@@ -3,63 +3,10 @@
 'use strict';
 
 const updateNotifier = require('update-notifier');
-const pkg = require('../package.json');
+const pkg = require('../package');
 
 // Print an update notification if a new version of ncgs is available.
 updateNotifier({pkg}).notify();
 
-const LOG_LEVEL = 'warn';
-const GITHUB_REPOSITORY_RE = /github\.com\/(.*?)(\.git)?$/;
-
-const log = require('npmlog');
-const fs = require('fs');
-const path = require('path');
-const github = require('octonode');
-const ghClient = github.client();
-const RegClient = require('npm-registry-client');
-log.level = LOG_LEVEL;
-const client = new RegClient({
-    log: log
-});
-
-const rootPath = process.cwd();
-const target = process.argv.slice(2)[0];
-const packagePath = target ? path.resolve(target) : path.join(rootPath, 'package.json');
-if (!fs.existsSync(packagePath)) {
-    console.log('No package.json found!');
-    return;
-}
-const packageFile = require(packagePath);
-const dependencies = packageFile.dependencies || {};
-const devDependencies = packageFile.devDependencies || {};
-
-checkDependencies(dependencies);
-checkDependencies(devDependencies);
-
-function checkDependencies(dependencies) {
-    for (const dependencie in dependencies) {
-        checkDependencie(dependencie);
-    }
-}
-
-function checkDependencie(dependencie) {
-    client.get('https://registry.npmjs.org/' + dependencie, {}, (error, data) => {
-        const repository = data.repository;
-        if (!repository) {
-            console.log(dependencie, 'No repository found');
-            return;
-        }
-
-        const repositoryUrl = repository.url;
-        const matches = repositoryUrl.match(GITHUB_REPOSITORY_RE);
-        if (!matches) {
-            console.log(dependencie, 'No GitHub repository found in', repositoryUrl);
-            return;
-        }
-
-        const gitHubRepository = matches[1];
-        ghClient.repo(gitHubRepository).info((err, data, headers) => {
-            console.log(dependencie, data.stargazers_count);
-        });
-    });
-}
+// Run!
+require('../lib/npm-check-github-stars');
