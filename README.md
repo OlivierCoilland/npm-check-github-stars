@@ -32,6 +32,11 @@ $ npm-check-github-stars /tmp/package.json
 
 You can use `npm-check-github-stars` or `ncgs`.
 
+## Todo
+
+- Add some color and padding for the sake of art
+- Handle GitHub API rate limit
+
 ## License
 
 Released under the [MIT license](https://tldrlegal.com/license/mit-license).
