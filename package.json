@@ -26,8 +26,8 @@
     "url": "git+https://github.com/OlivierCoilland/npm-check-github-stars.git"
   },
   "scripts": {
-    "lint": "eslint bin/ncgs",
-    "lint:fix": "eslint --fix bin/ncgs",
+    "lint": "eslint bin/*",
+    "lint:fix": "eslint --fix bin/*",
     "test": "npm run lint"
   },
   "dependencies": {
