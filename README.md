@@ -4,11 +4,9 @@ Check how many GitHub stars your dependencies are rated.
 
 > Pretty raw for the moment, but I might add some color and a little padding!
 
-## On the command line
-
-This is the easiest way to use `npm-check-github-stars`.
-
 ## Installation
+
+On the command line is the easiest way to use `npm-check-github-stars`.
 
 ```bash
 $ npm install -g npm-check-github-stars
