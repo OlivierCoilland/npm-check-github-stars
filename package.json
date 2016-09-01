@@ -20,7 +20,7 @@
     "npm-check-github-stars": "./bin/npm-check-github-stars",
     "ncgs": "./bin/ncgs"
   },
-  "main": "./lib/npm-check-github-stars",
+  "main": "./lib/npm-check-github-stars.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OlivierCoilland/npm-check-github-stars.git"
@@ -31,9 +31,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "npm-registry-client": "7.1.2",
-    "npmlog": "4.0.0",
-    "octonode": "0.7.6",
+    "npm-to-github": "1.0.0",
     "update-notifier": "1.0.2"
   },
   "devDependencies": {
