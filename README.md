@@ -2,8 +2,6 @@
 
 Check how many GitHub stars your dependencies are rated.
 
-> Pretty raw for the moment, but I might add some color and a little padding!
-
 ## Installation
 
 On the command line is the easiest way to use `npm-check-github-stars`.
@@ -32,7 +30,6 @@ You can use `npm-check-github-stars` or `ncgs`.
 
 ## Todo
 
-- Add some color and padding for the sake of art
 - Handle GitHub API rate limit
 
 ## License
