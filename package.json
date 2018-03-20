@@ -31,6 +31,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
+    "colors": "1.2.0",
     "npm-to-github": "1.0.1",
     "update-notifier": "2.1.0"
   },
