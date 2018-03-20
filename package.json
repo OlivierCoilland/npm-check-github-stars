@@ -31,12 +31,12 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "colors": "1.2.0",
-    "npm-to-github": "1.0.1",
-    "update-notifier": "2.1.0"
+    "colors": "1.2.1",
+    "npm-to-github": "2.1.1",
+    "update-notifier": "2.3.0"
   },
   "devDependencies": {
-    "eslint": "3.19.0"
+    "eslint": "4.19.0"
   },
   "preferGlobal": true
 }
