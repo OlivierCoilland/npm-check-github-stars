@@ -1,4 +1,7 @@
 # npm-check-github-stars
+[![NPM version](http://img.shields.io/npm/v/npm-check-github-stars.svg)](https://www.npmjs.org/package/npm-check-github-stars)
+[![Dependency Status](https://david-dm.org/OlivierCoilland/npm-check-github-stars-js.svg)](https://david-dm.org/OlivierCoilland/npm-check-github-stars-js)
+[![devDependency Status](https://david-dm.org/OlivierCoilland/npm-check-github-stars-js/dev-status.svg)](https://david-dm.org/OlivierCoilland/npm-check-github-stars-js#info=devDependencies)
 
 Check how many GitHub stars your dependencies are rated.
 
